@@ -1,45 +1,14 @@
-# Hydrogen template: Skeleton
+# Meta exports bug
 
-Hydrogen is Shopify’s stack for headless commerce. Hydrogen is designed to dovetail with [Remix](https://remix.run/), Shopify’s full stack web framework. This template contains a **minimal setup** of components, queries and tooling to get started with Hydrogen.
+> Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node.
 
-[Check out Hydrogen docs](https://shopify.dev/custom-storefronts/hydrogen)
-[Get familiar with Remix](https://remix.run/docs/en/v1)
+https://screenshot.click/04-00-kuxsv-3vual.gif
 
-## What's included
+To reproduce:
 
-- Remix
-- Hydrogen
-- Oxygen
-- Vite
-- Shopify CLI
-- ESLint
-- Prettier
-- GraphQL generator
-- TypeScript and JavaScript flavors
-- Minimal setup of components and routes
+1. Run `npm run dev`
+2. Go to http://localhost:3000
+3. Click the Sneakers link
+4. Click the Home link
 
-## Getting started
-
-**Requirements:**
-
-- Node.js version 18.0.0 or higher
-
-```bash
-npm create @shopify/hydrogen@latest
-```
-
-## Building for production
-
-```bash
-npm run build
-```
-
-## Local development
-
-```bash
-npm run dev
-```
-
-## Setup for using Customer Account API (`/account` section)
-
-Follow step 1 and 2 of <https://shopify.dev/docs/custom-storefronts/building-with-the-customer-account-api/hydrogen#step-1-set-up-a-public-domain-for-local-development>
+Repeat steps 3 and 4 until you see the error. You'll only see the error once. Restart the server and follow the same steps to see the error again.
